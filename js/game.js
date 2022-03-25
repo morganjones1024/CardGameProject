@@ -151,9 +151,11 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
 //Card Display Divs:
 document.getElementById("playerCard").innerText = playerFaceTrue+playerSuit;
 document.getElementById("computerCard").innerText = computerFaceTrue+computerSuit;
-//Score Display Divs:
-document.getElementById("playerScore").innerText = playerScore;
-document.getElementById("computerScore").innerText = computerScore;
+// //Score Display Divs:
+// (these are removed because the score doesn't actually matter for the game - number of cards do)
+// (see: lines 161-189 for win function)
+// document.getElementById("playerScore").innerText = playerScore;
+// document.getElementById("computerScore").innerText = computerScore;
 
 
 function playerShuffle(){
