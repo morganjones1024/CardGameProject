@@ -65,6 +65,12 @@ position: absolute;
 margin-left: 18rem;
 margin-top: 28rem;
  }
+
+#reset {
+ position: absolute;
+ margin-left: 40rem;
+ margin-top: 28rem;
+}
         
 
 .right_player {
