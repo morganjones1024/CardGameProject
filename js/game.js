@@ -58,14 +58,18 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
         let playerWar = getCard();
         let computerWar = getCard();
         if (playerWar > computerWar){
-            playerScore+=4;
+            playerScore+=10;
+            playerDeck-=4;
             computerDeck-=4;
+            playerDiscard+=10;
             //all innerText lines below here display the round results to a div:
             //(all will likely need to be refactored when HTML comes through)
             document.getElementById("roundResults").innerText = "You won the War!";
         } else if (playerWar<computerWar){
-            computerScore+=4;
+            computerScore+=10;
             playerDeck-=4;
+            computerDeck-=4;
+            computerDiscard+=10;
             document.getElementById("roundResults").innerText = "The Computer won the war!";
         } else {
             document.getElementById("roundResults").innerText = "We're declaring peace instead of a double-War.";
@@ -73,12 +77,16 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
     } else if (playerFace > computerFace){
         document.getElementById("warDeclaration").innerText =" \n \n ";
     playerScore++;
+    playerDeck--;
+    playerDiscard+=2;
     computerDeck --;
     document.getElementById("roundResults").innerText ="You won the round! \n -";
     } else {
         document.getElementById("warDeclaration").innerText =" \n \n ";
 
     computerScore++;
+    playerDeck--;
+    computerDiscard+=2;
     playerDeck--;
     document.getElementById("roundResults").innerText ="The computer won the round!";
     }
@@ -148,14 +156,46 @@ document.getElementById("playerScore").innerText = playerScore;
 document.getElementById("computerScore").innerText = computerScore;
 
 
+function playerShuffle(){
+    if (playerDeck <= 0){
+        if (playerDiscard <= 0){
+            console.log("+++GAME OVER: YOU LOSE+++");
+        } else {
+            playerDeck = playerDiscard;
+            playerDiscard = 0;
+        }
+    }
+};
+function computerShuffle(){
+    if (computerDeck <= 0){
+        if (computerDiscard <= 0){
+            console.log("+++GAME OVER: YOU WIN!!!+++");
+        } else {
+            computerDeck = computerDiscard;
+            computerDiscard = 0;
+        }
+    }
+};
 
+function winBanner(){
+    if (playerDeck <=0 && playerDiscard <=0){
+        document.getElementById("warDeclaration").innerText ="GAME OVER: YOU LOSE";
+    } else if (computerDeck <=0 && computerDiscard <=0){
+        document.getElementById("warDeclaration").innerText ="GAME OVER: YOU WIN!";
 
+    }
+}
+playerShuffle();
+computerShuffle();
+winBanner();
 };
 
 //running the above (console.log exists as a check/compare to output)
 compare(playerFace, computerFace);
-console.log(playerScore);
-console.log(computerScore);
+console.log(`PlayerScore: ${playerScore}`);
+console.log(`ComputerScore: ${computerScore}`);
+console.log(`Decks: Player: ${playerDeck} | Computer: ${computerDeck}`);
+console.log(`Discards: Player ${playerDiscard} | Computer: ${computerDiscard}`);
 
 //end of gameRun
 };
@@ -165,6 +205,10 @@ console.log(computerScore);
 function resetGame(){
     playerScore = 0;
     computerScore = 0;
+    playerDeck = 26;
+    computerDeck = 26;
+    playerDiscard = 0;
+    computerDiscard = 0;
     //Card Face divs:
     document.getElementById("playerCard").innerText = "-";
     document.getElementById("computerCard").innerText = "-";
@@ -172,3 +216,5 @@ function resetGame(){
     document.getElementById("playerScore").innerText = '-';
     document.getElementById("computerScore").innerText = '-';
 };
+
+
