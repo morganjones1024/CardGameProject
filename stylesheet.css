@@ -119,10 +119,13 @@ margin-left: 24rem;
  width: 7.3%;
 }
 
-.front_of_card:hover,
-.front_of_card:active{
-    transform:scale(1.2);	
+.front_of_card:hover {
 
+}
+.front_of_card:active {
+
+    transform:scale(1.2);	
+}
 /*END OF HOME PAGE*/
 
 
