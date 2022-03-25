@@ -14,12 +14,7 @@
 
 <!-- font-family: 'Alfa Slab One', cursive; -->
     <title>Let's Play WAR!</title>
-<style>
-  body *{
-    border: 2px solid red;
-  }
-  }
-</style>
+
 </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -42,9 +37,9 @@
 
     <div class="top_border">
       <section class="cpu">
-        <h2>CPU</h2>
+        <h2>Computer Score:</h2>
         <div class="info top">
-          <div data-games-won="0" >Computer Score:</div>
+          <div data-games-won="0" ></div>
           <div id = "computerScore">-</div>
         </div>
         <div class="card right">
@@ -54,10 +49,9 @@
 
 
       <section class="player">
-        <h2>You</h2>
+        <h2>Player Score:</h2>
         <div class="info right">
-          <div data-games-won="0" id = "playerScore">Player Score:</div>
-          <div id = "playerScore">-</div>
+          <div data-games-won="0" id = "playerScore">-</div>
         </div>
         <div class="card left">
           <span class="name"></span>
@@ -74,7 +68,18 @@
     <div id = "gameBox">
     <div class="left_player">
         <h3 class="player_one">Player 1</h3>
-        <button type="button" class="btn btn-danger" onclick="gameRun()">Hit to go</button>
+        <div id="playerCard">
+          -
+        </div>
+          <div id = "playerHand">
+            Player Deck:
+            <div id="playerDeckReport">-
+
+            </div>
+            Player Discard:
+            <div id = "playerDiscardReport">-
+          </div>
+        </div>
 
         <!-- <img class="ace_of_diamonds" src="./img/ace_of_diamonds.png"> -->
         <!-- <img src="./img/eight_of_cloves.png" width="99px"> -->
@@ -83,23 +88,44 @@
 
    
     <div class="front_of_card">
-        <img src="./img/front_of_card.png">
-        <button id="reset" type="button" class="btn btn-light">Reset</button>
+        <div id= instruction><h3 id="instruction">Press the card to play!</h3></div>
+        <button id = "gameButton" onclick="gameRun()"><img id = "cardBack" src="./img/front_of_card.png"></button>
+        <button id="resetButton" onclick="resetGame()" type="button" class="btn btn-danger" >Reset</button>
 
     </div>
 
     <div class="right_player">
-        <h3 class="player_two">Computer</h3>
-        <!-- <img class="joker" src="./img/joker.png" height="150px" with="99px"> -->
-        <!-- <img class="four_of_spades" src="./img/four_of_spades.png" height="147px" width="99px"> -->
-        <!-- <button type="button" class="btn btn-primary">Hit to go</button> -->
+      <h3 class="player_two">Computer</h3>
+      <div id="computerCard">
+        -
+      </div>
+      <div id = "computerHand">
+        Computer Deck:
+        <div id="computerDeckReport">-
+
+        </div>
+        Computer Discard:
+        <div id = "computerDiscardReport">-
+      </div>
 
     </div>
-
+</div>
+</div>
 
 
  
-    </div>
+   
+
+    <section class="gameReporting">
+      <div id="roundResults">
+        -
+      </div>
+      <div id="warDeclaration">
+        
+      </div>
+
+
+    </section>
 
 
 <!--

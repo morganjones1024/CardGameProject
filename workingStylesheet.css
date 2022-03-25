@@ -1,15 +1,89 @@
+  /* body *{
+    border: 2px solid red;
+  } */
+
 body{
     display: flex;
     flex-direction: column;
 }
 
+.poker_background h1{
+    color: red;
+    text-decoration: underline;
+    text-align: center;
+}
 #gameBox{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 0 10px;
 }
 
+#instruction{
+    text-align: center;
+}
 .front_of_card{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#playerHand{
+    display: flex;
+    flex-direction: column;
+}
+#computerHand{
+    display: flex;
+    flex-direction: column;
+}
+#gameButton{
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+#cardBack{
+    width: 150px;
+}
+
+#resetButton{
+    margin-top: 5px;
+    text-align: center;
+}
+
+#playerCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    width: 150px;
+    height: 200px;
+    font-size: 3em;
+}
+
+#computerCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    width: 150px;
+    height: 200px;
+    font-size: 3em;
+}
+
+.gameReporting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#warDeclaration{
+    font-size: 2em;
+    color: red;
+
 }
