@@ -38,6 +38,10 @@ text-align: center;
 }
 
 .left_player {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f7657c1fbdd13cfa2d372741767c908cbfe3897a
  margin-top: 5rem;
  margin-bottom: -23rem;
  margin-left: 18rem;
@@ -51,7 +55,7 @@ margin-left: -1rem;
 
 .ace_of_diamonds, img {
 margin-top: 15rem;
- margin-left: 4rem;
+margin-left: 4rem;
 }
 
 .eight_of_cloves {
@@ -67,10 +71,11 @@ margin-top: 28rem;
  }
 
 #reset {
-  display: flex;
+  display: absolute;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: auto;
+  margin-left: 700px;
 }
         
 
@@ -120,10 +125,13 @@ margin-left: 24rem;
  width: 7.3%;
 }
 
-.front_of_card:hover,
-.front_of_card:active{
-    transform:scale(1.2);	
+.front_of_card:hover {
 
+}
+.front_of_card:active {
+
+    transform:scale(1.2);	
+}
 /*END OF HOME PAGE*/
 
 
@@ -131,7 +139,7 @@ margin-left: 24rem;
 /*STARTING OF RULES PAGE*/
 
 .rules_background {
-background-image: url("./css/curtain.png");
+background-image: url("css/curtain.png");
 background-attachment: relative;      
 /*background-image: linear-gradient(314deg, #015d00 0%, #04bf00 74%, #015d00 20%,);*/
 background-position: center 1px; /* I had to change the number for center -238px to 1px in order for the entire picture to appear*/
