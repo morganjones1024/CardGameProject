@@ -67,9 +67,10 @@ margin-top: 28rem;
  }
 
 #reset {
- position: absolute;
- margin-left: 40rem;
- margin-top: 28rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
         
 
