@@ -62,7 +62,7 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
             playerDeck-=5;
             computerDeck-=5;
             playerDiscard+=10;
-            //all innerText lines below here display the round results to a div:
+            // all innerText lines below here display the round results to a div:
             //(all will likely need to be refactored when HTML comes through)
             document.getElementById("roundResults").innerText = "You won the War!";
         } else if (playerWar<computerWar){
