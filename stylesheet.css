@@ -1,0 +1,180 @@
+html, body {
+ margin:0;
+ padding:0;
+ overflow-x: hidden;	
+  /*prevents white space from the right side*/
+}
+
+.nav-link {
+        margin-left: 38px;
+        text-align: center;
+}
+
+.nav-link:hover, .nav-link:active { 
+    background-color: black;
+    background-color: grey;
+}
+
+.top_border {
+background-color:#800000;
+color: #fff;
+}
+
+.poker_background {
+background-color:  #015d00;
+ /*background-image: url("./css/poker_background.jpg");*/
+ background-attachment: relative;      
+ /*background-image: linear-gradient(314deg, #015d00 0%, #04bf00 74%, #015d00 20%,);*/
+ background-position: center 1px; /* I had to change the number for center -238px to 1px in order for the entire picture to appear*/
+ background-repeat: no-repeat;   
+ background-size: cover;
+ height: 66vw;
+ width: 100%;
+} 
+
+.poker_background h1 {
+color: #fff;
+text-align: center;
+}
+
+.left_player {
+ margin-top: 19rem;
+ margin-bottom: -23rem;
+ margin-left: 18rem;
+}
+
+.player_one  {
+color: #fff;
+margin-bottom: -14rem;
+margin-left: -1rem;
+}
+
+.ace_of_diamonds, img {
+margin-top: 15rem;
+ margin-left: 4rem;
+}
+
+.eight_of_cloves {
+ margin-right: -2rem;
+ margin-top: 58rem;
+ 
+}
+
+.btn {
+position: absolute;
+margin-left: 18rem;
+margin-top: 28rem;
+ }
+        
+
+.right_player {
+display: flex;
+justify-content: end;
+margin-left: 10rem;
+margin-right: -53em;
+margin-top: -5rem;
+word-wrap: break-word;
+width: 68%;
+}
+
+.player_two {
+ color: #fff;
+ margin-left: 3rem;
+ margin-top: 25rem;
+}
+
+.joker, img {
+margin-top: 14rem;
+margin-left: 6rem;
+}
+
+.four_of_spades, img {
+ margin-left: -15rem;
+}
+
+.player_two  {
+margin-top: 10rem;
+margin-left: 24rem;
+}
+
+.btn-primary {
+ margin-top: 5rem;
+ margin-left: 74rem;    
+}
+
+.front_of_card img {
+ position: relative;
+ margin-left: 43rem;
+ margin-top: -13rem;
+ transform: rotate(1deg);
+ width: 7.3%;
+}
+
+.front_of_card:hover,
+.front_of_card:active{
+    transform:scale(1.2);	
+
+/*END OF HOME PAGE*/
+
+
+
+/*STARTING OF RULES PAGE*/
+}
+
+.rules_background {
+background-image: url("./css/curtain.png");
+background-attachment: relative;      
+/*background-image: linear-gradient(314deg, #015d00 0%, #04bf00 74%, #015d00 20%,);*/
+background-position: center 1px; /* I had to change the number for center -238px to 1px in order for the entire picture to appear*/
+background-repeat: no-repeat;   
+background-size: cover;
+height: 66vw;
+width: 100%;
+}
+
+.rules_background h3 {
+ color:#fff;
+ margin-bottom: 1.5rem;
+ padding-top: 9rem;
+}
+
+.rules_background p {
+ color:#fff;
+ font-size: 1.2rem;
+ margin-bottom: 3rem;
+ margin-left: 17rem;
+ word-break: break-all;
+ width: 69%;
+}
+
+ol li {
+ color: #fff;
+ margin-top: 23px;
+margin-left: 13rem;
+text-align: justify;
+}
+
+.end_note {
+font-style: italic;
+font-weight: 400;   
+margin-top: 6rem;
+text-align: center;
+
+}
+
+.btn-secondary {
+text-align: center;
+margin-left: 44rem;
+margin-top: 5rem;
+}
+
+/*End OF RULES PAGE*/
+
+
+.parallax {
+background: url('css/casino_scenery.png') no-repeat; 
+background-attachment: fixed;
+background-size: cover;
+height: 66vw;
+width: 100%;
+}

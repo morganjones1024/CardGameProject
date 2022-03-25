@@ -1,0 +1,14 @@
+body {
+        background-image: url("poker_background.jpg")
+        background-repeat: no-repeat;   
+        background-size: cover;/
+        background-attachment: relative;
+        background-position: center 1px; /* I had to change the number for center -238px to 1px in order for the entire picture to appear*/
+        height: 86vh;
+        height: 46vw;
+        width: 100%;
+} 
+
+.poker_title {
+        font-size: 1.6prem;
+}
