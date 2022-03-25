@@ -1,0 +1,58 @@
+body *{
+    border: 2px solid red;
+    margin: 20px;
+}
+body{
+    /* display: flex; */
+    justify-content: center;
+    background-color: black;
+}
+#playButton{
+    padding: 50px;
+    margin-top: 80px;
+}
+
+#resetButton{
+    padding: 10px;
+}
+p{
+    background-color: grey;
+}
+#playerBox{
+    width: 150px;
+    text-align: center;
+    background-color: white;
+}
+#computerBox{
+    width: 150px;
+    text-align: center;
+    background-color: white;
+}
+#gameField{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    height: 500px;
+    /* max-width: 600px; */
+}
+
+#warbox{
+    width: 300px;
+    height: 400px;
+    text-align: center;
+}
+#warbox p {
+    background-color: red;
+    text-align: center;
+}
+
+#warDeclaration {
+    position: absolute;
+    top: 25px;
+    margin-top: 0;
+    padding-bottom: 50px;
+    font-size: 2em;
+    height: 20px;
+}
+
