@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAR!</title>
+
+    <link rel="stylesheet" href="/Dustin Save File/style.css">
+</head>
+<body>
+    <div id = "gameField">
+<div id="playerBox">
+    <p>Player Card</p>
+    <div id = "playerCard">-</div>
+    <p>Player Score</p>
+    <div id = "playerScore">-</div>
+   
+    
+</div>
+<div id = "warbox">
+    <p id = "warDeclaration"><!-- +++++++++++<br>It's a War!<br>+++++++++++ --></p>
+    <button onclick="gameRun()" id = "playButton">Play a round</button>
+    <p>WAR!</p>
+    <p id = "roundResults">All's quiet...</p>
+    <button onclick="resetGame();" id = "resetButton">Reset</button>
+
+</div>
+    
+
+<div id = "computerBox">
+    <p>Computer Card</p>
+    <div id = "computerCard">-</div>
+    <p>Computer Score</p>
+    <div id = "computerScore">-</div>
+</div>
+</div>
+
+
+<script src="/Dustin Save File/js/game.js"></script>
+</body>
+</html>
