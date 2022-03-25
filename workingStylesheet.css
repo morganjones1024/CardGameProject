@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#gameBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.front_of_card{
+    display: flex;
+    flex-direction: column;
+}

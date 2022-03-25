@@ -54,7 +54,7 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
     //handles the "War" event on matching cards:
     if (playerFace == computerFace){
         //changes the upper text area during War event:
-        document.getElementById("warDeclaration").innerText ="+++++++++++\nIt's a War!\n+++++++++++";
+        // document.getElementById("warDeclaration").innerText ="+++++++++++\nIt's a War!\n+++++++++++";
         let playerWar = getCard();
         let computerWar = getCard();
         if (playerWar > computerWar){
@@ -64,31 +64,31 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
             playerDiscard+=10;
             //all innerText lines below here display the round results to a div:
             //(all will likely need to be refactored when HTML comes through)
-            document.getElementById("roundResults").innerText = "You won the War!";
+            // document.getElementById("roundResults").innerText = "You won the War!";
         } else if (playerWar<computerWar){
             computerScore+=10;
             playerDeck-=5;
             computerDeck-=5;
             computerDiscard+=10;
-            document.getElementById("roundResults").innerText = "The Computer won the war!";
+            // document.getElementById("roundResults").innerText = "The Computer won the war!";
         } else {
-            document.getElementById("roundResults").innerText = "We're declaring peace instead of a double-War.";
+            // document.getElementById("roundResults").innerText = "We're declaring peace instead of a double-War.";
         }
     } else if (playerFace > computerFace){
-        document.getElementById("warDeclaration").innerText =" \n \n ";
+        // document.getElementById("warDeclaration").innerText =" \n \n ";
     playerScore++;
     playerDeck--;
     playerDiscard+=2;
     computerDeck --;
-    document.getElementById("roundResults").innerText ="You won the round! \n -";
+    // document.getElementById("roundResults").innerText ="You won the round! \n -";
     } else {
-        document.getElementById("warDeclaration").innerText =" \n \n ";
+        // document.getElementById("warDeclaration").innerText =" \n \n ";
 
     computerScore++;
     playerDeck--;
     computerDiscard+=2;
     playerDeck--;
-    document.getElementById("roundResults").innerText ="The computer won the round!";
+    // document.getElementById("roundResults").innerText ="The computer won the round!";
     }
 
 //fixing 11-14 display values to reflect face cards:
@@ -149,8 +149,8 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
 //DOM Display work:
 
 //Card Display Divs:
-document.getElementById("playerCard").innerText = playerFaceTrue+playerSuit;
-document.getElementById("computerCard").innerText = computerFaceTrue+computerSuit;
+// document.getElementById("playerCard").innerText = playerFaceTrue+playerSuit;
+// document.getElementById("computerCard").innerText = computerFaceTrue+computerSuit;
 //Score Display Divs:
 document.getElementById("playerScore").innerText = playerScore;
 document.getElementById("computerScore").innerText = computerScore;

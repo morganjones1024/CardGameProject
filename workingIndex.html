@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="/workingStylesheet.css">
 
 <!-- font-family: 'Alfa Slab One', cursive; -->
     <title>Let's Play WAR!</title>
@@ -18,7 +18,7 @@
   body *{
     border: 2px solid red;
   }
-
+  }
 </style>
 </head>
   <body>
@@ -71,31 +71,35 @@
  <section class="poker_background">
   <h1>A Game of War</h1>
 
+    <div id = "gameBox">
+    <div class="left_player">
+        <h3 class="player_one">Player 1</h3>
+        <button type="button" class="btn btn-danger" onclick="gameRun()">Hit to go</button>
 
-  <div class="left_player">
-    <h3 class="player_one">Player 1</h3>
-    <img class="ace_of_diamonds" src="./img/ace_of_diamonds.png">
-    <img src="./img/eight_of_cloves.png" width="99px">
-</div>
+        <!-- <img class="ace_of_diamonds" src="./img/ace_of_diamonds.png"> -->
+        <!-- <img src="./img/eight_of_cloves.png" width="99px"> -->
+        </div>
 
-<button type="button" class="btn btn-danger" onclick="gameRun()">Hit to go</button>
-     
-<div>
-<button id="reset" type="button" class="btn btn-light">Reset</button>
-</div>
 
- <div class="right_player">
-  <h3 class="player_two">Player 2</h3>
-  <img class="joker" src="./img/joker.png" height="150px" with="99px">
-  <img class="four_of_spades" src="./img/four_of_spades.png" height="147px" width="99px">
- </div>
+   
+    <div class="front_of_card">
+        <img src="./img/front_of_card.png">
+        <button id="reset" type="button" class="btn btn-light">Reset</button>
 
- <button type="button" class="btn btn-primary">Hit to go</button>
-  
+    </div>
 
-<div class="front_of_card">
-  <img src="./img/front_of_card.png">
-</div>
+    <div class="right_player">
+        <h3 class="player_two">Computer</h3>
+        <!-- <img class="joker" src="./img/joker.png" height="150px" with="99px"> -->
+        <!-- <img class="four_of_spades" src="./img/four_of_spades.png" height="147px" width="99px"> -->
+        <!-- <button type="button" class="btn btn-primary">Hit to go</button> -->
+
+    </div>
+
+
+
+ 
+    </div>
 
 
 <!--
@@ -124,15 +128,12 @@
 
     
     </div>-->
-  </div>
+<!-- This closes nothing?? -->
+<!-- </div> -->
 
-<script src="/js/game.js">
+<script src="/js/workingGame.js">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
-<div class="button">
-<footer>
-   <!--button was here first-->
-</div>
-</footer>
+ 
 </html> 
