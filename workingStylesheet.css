@@ -5,6 +5,7 @@
 body{
     display: flex;
     flex-direction: column;
+    background-image: url("css/poker_background_2.jpg")
 }
 
 .poker_background h1{
