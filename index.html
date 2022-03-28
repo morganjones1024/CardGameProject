@@ -34,7 +34,7 @@
 
 <!--END OF NAVIGATION BAR-->
 
-
+<!-- The score section was removed; doesn't match game parameters -->
     <!-- <div class="top_border">
       <section class="cpu">
         <h2>Computer Score:</h2>
@@ -72,15 +72,16 @@
           -
         </div>
           <div id = "playerHand">
-            Player Deck:
+            <div class = "reportTitle">Player Deck:</div>
             <div id="playerDeckReport">-
 
             </div>
-            Player Discard:
+            <div class = "reportTitle">Player Discard:</div>
             <div id = "playerDiscardReport">-
           </div>
         </div>
 
+        <!-- not functional for card generation/display -->
         <!-- <img class="ace_of_diamonds" src="./img/ace_of_diamonds.png"> -->
         <!-- <img src="./img/eight_of_cloves.png" width="99px"> -->
         </div>
@@ -100,11 +101,9 @@
         -
       </div>
       <div id = "computerHand">
-        Computer Deck:
-        <div id="computerDeckReport">-
-
-        </div>
-        Computer Discard:
+        <div class = "reportTitle">Computer Deck:</div>
+        <div id="computerDeckReport">-</div>
+        <div class = "reportTitle">Computer Deck:</div>
         <div id = "computerDiscardReport">-
       </div>
 

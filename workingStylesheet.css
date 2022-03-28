@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+  
   /* body *{
     border: 2px solid red;
   } */
@@ -9,9 +11,12 @@ body{
 }
 
 .poker_background h1{
+    font-family: "UnifrakturMaguntia";
+    font-size: 4.5em;
     color: red;
     text-decoration: underline;
     text-align: center;
+    text-shadow: 20px 10px 15px #333;
 }
 #gameBox{
     display: flex;
@@ -54,6 +59,7 @@ body{
     text-align: center;
 }
 
+/* added background/etc to offset green background */
 #playerCard{
     display: flex;
     justify-content: center;
@@ -63,6 +69,10 @@ body{
     width: 150px;
     height: 200px;
     font-size: 3em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 12px 10px 20px #333;
+    margin-bottom: 20px;
 }
 
 #computerCard{
@@ -74,17 +84,65 @@ body{
     width: 150px;
     height: 200px;
     font-size: 3em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 20px 10px 20px #333;
+    margin-bottom: 20px;
+
 }
 
 .gameReporting{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
+    background-color: wheat;
+    border: 5px solid brown;
+    margin: 50px 20% 0 20%;
+    border-radius: 10px;
+    height: 200px;
+}
+
+#roundResults{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #222;
+    margin: 10px 0 0px 0;
 }
 
 #warDeclaration{
-    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
     color: red;
 
 }
+
+/* New background CSS left text hard to read, adding boxes and such below for legibility*/
+#playerHand{
+    background-color: antiquewhite;
+    margin-top: 5px;
+    border: 3px dotted blue;
+    border-radius: 5px;
+}
+
+#playerDeckReport{
+    text-align: center;
+}
+.reportTitle{
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+}
+
+#playerDiscardReport{
+    text-align: center;
+}
+#computerHand{
+    background-color: antiquewhite;
+    margin-top: 5px;
+    border: 3px dotted red;
+    border-radius: 5px;
+}
+
+
