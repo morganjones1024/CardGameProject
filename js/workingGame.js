@@ -2,8 +2,7 @@
 let playerScore = 100;
 let computerScore =0;
 
-//this doesn't do anything yet; working on how to fudge a win
-//condition that feels correct for game play
+//adjusted scoring for game play
 let playerDeck = 26;
 let computerDeck = 26;
 let playerDiscard = 0;
