@@ -2,8 +2,7 @@
 let playerScore = 100;
 let computerScore =0;
 
-//this doesn't do anything yet; working on how to fudge a win
-//condition that feels correct for game play
+//adjusted scoring for game play
 let playerDeck = 26;
 let computerDeck = 26;
 let playerDiscard = 0;
@@ -53,8 +52,8 @@ function compare(playerFace,computerFace){
 console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "Player 2's card is a: " + computerFace + " of " + computerSuit);
     //handles the "War" event on matching cards:
     if (playerFace == computerFace){
-        //changes the upper text area during War event:
-        document.getElementById("warDeclaration").innerText ="+++++++++++\nIt's a War!\n+++++++++++";
+        //changes the lower text area during War event:
+        document.getElementById("warDeclaration").innerText ="It's a War!";
         let playerWar = getCard();
         let computerWar = getCard();
         if (playerWar > computerWar){
@@ -62,7 +61,7 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
             playerDeck-=5;
             computerDeck-=5;
             playerDiscard+=10;
-            // all innerText lines below here display the round results to a div:
+            //all innerText lines below here display the round results to a div:
             //(all will likely need to be refactored when HTML comes through)
             document.getElementById("roundResults").innerText = "You won the War!";
         } else if (playerWar<computerWar){
@@ -80,7 +79,7 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
     playerDeck--;
     playerDiscard+=2;
     computerDeck --;
-    document.getElementById("roundResults").innerText ="You won the round! \n -";
+    document.getElementById("roundResults").innerText ="You won the round!";
     } else {
         document.getElementById("warDeclaration").innerText =" \n \n ";
 
@@ -151,13 +150,20 @@ console.log("Player 1's card is " + playerFace + " of " + playerSuit + "\n" + "P
 //Card Display Divs:
 document.getElementById("playerCard").innerText = playerFaceTrue+playerSuit;
 document.getElementById("computerCard").innerText = computerFaceTrue+computerSuit;
-// //Score Display Divs:
+//Score Display Divs:
 // (these are removed because the score doesn't actually matter for the game - number of cards do)
 // (see: lines 161-189 for win function)
 // document.getElementById("playerScore").innerText = playerScore;
 // document.getElementById("computerScore").innerText = computerScore;
+//Deck Display Divs:
+document.getElementById("playerDeckReport").innerText= playerDeck;
+document.getElementById("computerDeckReport").innerText= computerDeck;
+//Discard Display Divs:
+document.getElementById("playerDiscardReport").innerText = playerDiscard;
+document.getElementById("computerDiscardReport").innerText = computerDiscard;
 
 
+//determines if the game is over by checking if deck && discard are empty, or "shuffles" discard # back into deck#
 function playerShuffle(){
     if (playerDeck <= 0){
         if (playerDiscard <= 0){
@@ -182,8 +188,12 @@ function computerShuffle(){
 function winBanner(){
     if (playerDeck <=0 && playerDiscard <=0){
         document.getElementById("warDeclaration").innerText ="GAME OVER: YOU LOSE";
+        document.getElementById("instruction").innerHTML = "<h3> Hit reset to play again! </h3>";
+        document.getElementById("gameButton").disabled = true;
     } else if (computerDeck <=0 && computerDiscard <=0){
         document.getElementById("warDeclaration").innerText ="GAME OVER: YOU WIN!";
+        document.getElementById("instruction").innerHTML = "<h3> Hit reset to play again! </h3>";
+        document.getElementById("gameButton").diabled = true;
 
     }
 }
@@ -215,8 +225,26 @@ function resetGame(){
     document.getElementById("playerCard").innerText = "-";
     document.getElementById("computerCard").innerText = "-";
     //Score Display Divs:
-    document.getElementById("playerScore").innerText = '-';
-    document.getElementById("computerScore").innerText = '-';
+    // document.getElementById("playerScore").innerText = '-';
+    // document.getElementById("computerScore").innerText = '-';
+    //restore the button function:
+    document.getElementById("gameButton").disabled = false;
+    //reset round/war notices to blank:
+    document.getElementById("roundResults").innerText =" ";
+    document.getElementById("warDeclaration").innerText =" ";
+    //reset "hit reset to play again"
+    document.getElementById("instruction").innerHTML = '<h3> Click the card to play! </h3>' ;
+    //Score Display Divs:
+    //same as the aboves: all score mechanics disabled as irrelevant
+    // document.getElementById("playerScore").innerText = ' ';
+    // document.getElementById("computerScore").innerText = '-';
+    //Deck and Discard Divs:
+    document.getElementById("playerDeckReport").innerText= "-";
+    document.getElementById("computerDeckReport").innerText= "-";
+    //Discard Display Divs:
+    document.getElementById("playerDiscardReport").innerText = "-";
+    document.getElementById("computerDiscardReport").innerText = "-";
+
 };
 
 
